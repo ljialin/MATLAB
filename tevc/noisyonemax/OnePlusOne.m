@@ -1,7 +1,7 @@
 % (1+1)-EA
-T=100000;
-R=[1 5 10 25 50];
-d=100;
+T=10000;
+d=10;
+R=[1:50];
 prob=1/d;
 trials=1000;
 gapT=100;
@@ -46,5 +46,5 @@ for idxR=1:length(R)
         
     end
 end
-savCmd=sprintf('save opo_d%dT%d.mat gapT prob R quality outputOpt visitedOpt',d,T);
+savCmd=sprintf('save opo_allR1-50_d%dT%d.mat gapT prob R quality outputOpt visitedOpt',d,T);
 eval(savCmd)

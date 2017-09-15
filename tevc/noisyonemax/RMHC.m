@@ -1,9 +1,9 @@
 % (1+1)-EA
-T=100000;
-R=[1 5 10 25 50];
-d=100;
+T=10000;
+R=[1:50];
+d=10;
 prob=1/d;
-trials=1000;
+trials=10000;
 gapT=100;
 
 quality=zeros(length(R),T/gapT,trials);
@@ -43,5 +43,5 @@ for idxR=1:length(R)
         
     end
 end
-savCmd=sprintf('save rmhc_d%dT%d.mat gapT prob R quality outputOpt visitedOpt',d,T);
+savCmd=sprintf('save rmhc_allR1-50_d%dT%d.mat gapT prob R quality outputOpt visitedOpt',d,T);
 eval(savCmd)
